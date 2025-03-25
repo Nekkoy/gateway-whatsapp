@@ -1,0 +1,37 @@
+{
+    "name": "nekkoy/gateway-whatsapp",
+    "description": "SMS Gateway for Whatsapp",
+    "homepage": "https://github.com/nekkoy/gateway-whatsapp",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "keywords": ["nekkoy", "laravel", "whatsapp", "sms", "gateway"],
+    "authors": [
+        {
+            "name": "Alexander Dudiak",
+            "email": "031991@gmail.com",
+            "homepage": "https://github.com/Nekkoy",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nekkoy\\GatewayWhatsapp\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "nekkoy/gateway-abstract": ">=1.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nekkoy\\GatewayWhatsapp\\WhatsappServiceProvider"
+            ],
+            "aliases": {
+                "GatewayWhatsapp": "Nekkoy\\GatewayWhatsapp\\Facades\\GatewayWhatsapp::class"
+            }
+        }
+    }
+}
